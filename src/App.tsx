@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.scss';
 
 import Home from './pages/Home/home';
-import Loader from './components/Loader'
+import Loader from './components/loader'
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
