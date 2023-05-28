@@ -1,0 +1,22 @@
+/* Colour Palette */
+$dark: #343434;
+$light: #FCF7FC;
+$primary: #06F9D1;
+$secondary:#F84966;
+$teritary: #FBCC55;
+$dark-black: -webkit-linear-gradient($dark, #1A1A1A);
+$primary-green: -webkit-linear-gradient($primary, #51FBA6);
+$secondary-purple: -webkit-linear-gradient($secondary, #FB55A8);
+$teritary-yellow: -webkit-linear-gradient($teritary, #F0F849);
+
+/* Gradient tools */
+/* Do not use together */
+@mixin gradient-text($color) {
+    background: $color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradient-bg($color) {
+    background-image: $color;
+}

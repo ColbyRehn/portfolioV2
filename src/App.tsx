@@ -1,14 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 
-function App() {
+import Home from './pages/Home/home';
+
+const App = () => {
   return (
     <>
       <header>
-
+        <nav>
+          
+        </nav>
       </header>
       <main>
+        <Home />
 
       </main>
       <footer>
