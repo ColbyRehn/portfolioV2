@@ -6,7 +6,7 @@ import gmailIcon from '../../assets/gmail.svg';
 import pfp from '../../assets/pfp.png';
 import scrollDown from '../../assets/scrollDown.svg';
 
-const Home = () => {
+const Home:React.FC = () => {
 
     return (
         <section id="home-section">

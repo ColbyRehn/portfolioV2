@@ -23,7 +23,7 @@
     background-color: $dark;
 
     @include col();
-    gap: 2.5rem;
+    gap: 4rem;
 
     h1 {
         @include gradient-text($primary-green)
@@ -65,7 +65,7 @@
     }
 
     #scroll-down {
-        animation: displayDelay 0s 5s forwards, MoveUpDown 1.5s linear infinite;
+        animation: displayDelay 0s 5s forwards, MoveUpDown 1.5s ease-in-out infinite;
         visibility: hidden;
         position: absolute;
     }

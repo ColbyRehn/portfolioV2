@@ -1,23 +1,43 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
 import './App.scss';
 
 import Home from './pages/Home/home';
+import Loader from './components/Loader'
 
-const App = () => {
+const App: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const onPageLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      onPageLoad();
+    } else {
+      window.addEventListener('load', onPageLoad);
+      return () => window.removeEventListener('load', onPageLoad);
+    }
+  }, [])
+
   return (
     <>
-      <header>
-        <nav>
-          
-        </nav>
-      </header>
-      <main>
-        <Home />
+      {loading ? <Loader /> :
+      <>
+        <header>
+          <nav>
 
-      </main>
-      <footer>
+          </nav>
+        </header>
+        <main>
+          <Home />
 
-      </footer>
+        </main>
+        <footer>
+
+        </footer>
+      </>
+      }
     </>
   );
 }
