@@ -3,26 +3,32 @@ import './home.scss';
 import linkdinIcon from '../../assets/linkdin.svg';
 import githubIcon from '../../assets/github.svg';
 import gmailIcon from '../../assets/gmail.svg';
-import pfp from '../../assets/pfp.png';
-import scrollDown from '../../assets/scrollDown.svg';
+import pfp from './assets/pfp.webp';
+import scrollDown from './assets/scrollDown.svg';
 
 const Home:React.FC = () => {
 
     return (
         <section id="home-section">
-            <div id="info">
+            <div id="info" role="">
                 <div className="col">
                     <p>Hello, I am</p>
                     <h1>Colby Rehn</h1>
                     <p>a software engineer student</p>
                 </div>
                 <div className="icon-row">
-                    <img src={linkdinIcon} />
-                    <img src={githubIcon} />
-                    <img src={gmailIcon} />
+                    <a role="link" aria-label="Open new tab to Colby's Linkdin page" href="https://www.linkedin.com/in/colby-rehn-60033921b/" target="_blank">
+                        <img src={linkdinIcon} alt="White Linkdin Icon" />
+                    </a>
+                    <a role="link" aria-label="Open new tab to Colby's Github page" href="https://github.com/ColbyRehn" target="_blank">
+                        <img src={githubIcon} alt="White Github Icon" />
+                    </a>
+                    <a role="link" aria-label="Email Colby" href="mailto:rehn.colby@gmail.com" target="_blank">
+                        <img src={gmailIcon} alt="White Gmail Icon" />
+                    </a>
                 </div>
             </div>
-            <img src={pfp} />
+            <img src={pfp} alt="Colby Rehn smiling infront of pink and purple roses" />
             <img id="scroll-down" src={scrollDown} />
         </section>
     );

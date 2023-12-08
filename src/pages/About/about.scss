@@ -1,0 +1,13 @@
+@import 'src/styles/color.scss';
+
+#about-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: $dark;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

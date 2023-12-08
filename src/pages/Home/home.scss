@@ -1,4 +1,3 @@
-@import 'src/styles/font.scss';
 @import 'src/styles/color.scss';
 
 @mixin col() {
@@ -49,24 +48,28 @@
         img {
             height: 1.5rem;
         }
+
+        img:hover {
+            opacity: 0.8;
+        }
     }
 
-    @keyframes displayDelay {
-        to   { visibility: visible; }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
     }
 
     @keyframes MoveUpDown {
         0%, 100% {
-          bottom: 5px;
+          bottom: 40px;
         }
         50% {
-          bottom: 15px;
+          bottom: 50px;
         }
     }
 
     #scroll-down {
-        animation: displayDelay 0s 5s forwards, MoveUpDown 1.5s ease-in-out infinite;
-        visibility: hidden;
+        animation: fadeIn 10s, MoveUpDown 1.5s ease-in-out infinite;
         position: absolute;
     }
 }
