@@ -1,8 +1,11 @@
+import './loader.scss';
 
 const Loader:React.FC = () => {
     return (
-        <div aria-label="Loading">
-            Loading...
+        <div> 
+            <h2 aria-label="Loading">
+                Loading...
+            </h2>
         </div>
     );
 }
