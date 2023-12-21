@@ -1,0 +1,29 @@
+@import 'src/styles/color.scss';
+
+@mixin col() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#burger-menu {
+    @include col();
+    gap: 3px;
+    background-color: $light;
+    border: 0px;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+
+    .burger-line {
+        border: 1px solid $dark;
+        width: 100%;
+    }
+
+    button:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+}

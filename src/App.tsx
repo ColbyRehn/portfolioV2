@@ -4,6 +4,7 @@ import './App.scss';
 import Home from './pages/Home/home';
 import About from './pages/About/about';
 import Loader from './components/loader'
+import Menu from './components/Menu/menu'
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -27,11 +28,7 @@ const App: React.FC = () => {
       <>
         <header>
           <nav>
-            <button aria-label="Open menu">
-              <div className="burger-line" />
-              <div className="burger-line" />
-              <div className="burger-line" />
-            </button>
+            <Menu />
           </nav>
         </header>
         <main>
