@@ -6,7 +6,7 @@ import About from './pages/About/about';
 import Loader from './components/loader'
 import Menu from './components/Menu/menu'
 
-const App: React.FC = () => {
+const App = () => {
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {

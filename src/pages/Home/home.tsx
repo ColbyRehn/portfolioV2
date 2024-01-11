@@ -1,4 +1,3 @@
-import React from "react";
 import './home.scss';
 import linkdinIcon from '../../assets/linkdin.svg';
 import githubIcon from '../../assets/github.svg';
@@ -6,7 +5,7 @@ import gmailIcon from '../../assets/gmail.svg';
 import pfp from './assets/pfp.webp';
 import scrollDown from './assets/scrollDown.svg';
 
-const Home:React.FC = () => {
+const Home = () => {
 
     return (
         <section id="home-section">
@@ -29,7 +28,7 @@ const Home:React.FC = () => {
                 </div>
             </div>
             <img src={pfp} alt="Colby Rehn smiling infront of pink and purple roses" />
-            <img id="scroll-down" src={scrollDown} />
+            <img id="scroll-down" src={scrollDown} alt="Arrow point down" />
         </section>
     );
 }

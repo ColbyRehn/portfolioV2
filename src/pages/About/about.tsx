@@ -1,7 +1,6 @@
-import React from "react";
 import './about.scss';
 
-const About:React.FC = () => {
+const About = () => {
 
     return (
         <section id="about-section">

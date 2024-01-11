@@ -1,13 +1,15 @@
-import React from "react";
 import './menu.scss';
 
-const Menu:React.FC = () => {
+type Props = {
+    onClick?: () => void
+}
 
+const Menu = (props: Props) => {
     return (
-        <button id="burger-menu" aria-label="Open menu">
-              <div className="burger-line" />
-              <div className="burger-line" />
-              <div className="burger-line" />
+        <button id="burger-menu" aria-label="Open menu" onClick={props.onClick}>
+            {[...Array(3)].map(() => (
+                <div className="burger-line" />
+            ))}
         </button>
     );
 }
